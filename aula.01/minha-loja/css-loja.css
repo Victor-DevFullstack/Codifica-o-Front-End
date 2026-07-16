@@ -1,19 +1,23 @@
-
-.section1 {
-    
-}
-
-.img-product {
-    width: 25%;
-    height: auto;
-    background-color: #d9d9d9;
-}
-
-section{
-    display: block;
+.section1{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .product{
-    display: inline-block;
+    width: 300px;      /* ou 20%, se preferir */
+    box-shadow: 0 4px 8px rgba(0,0,0,.2);
+    border-radius: 5px;
+    overflow: hidden;
 }
 
+.img-product{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+footer {
+    background-color: gray;
+    color: white;
+}
