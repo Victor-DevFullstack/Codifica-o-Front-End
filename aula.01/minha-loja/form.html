@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="./css/form.css">
+    <script type="module" src="./script/script-btn.js"></script>
+</head>
+<body>
+    
+    <form 
+    id="form-register" 
+    action="/enviar"
+    method="POST">
+            <fieldset>
+            <h2 class="title">Contato e Cadastro</h2>
+
+            
+            <label for="input-name">Nome</label>
+            <input type="text"
+            id="input-name"
+            name="name"
+            required
+            minlength="3"
+            placeholder="Seu nome completo">
+
+
+            <label for="input-email">Email</label>
+            <input type="email"
+            id="input-email"
+            name="email"
+            required
+            placeholder="seu@email.com">
+
+
+            <label for="input-password">Senha</label>
+            <input type="password"
+            id="input-password"
+            name="password"
+            required
+            minlength="8"
+            placeholder="Mínimo 8 caracteres">
+
+            <label for="input-category">Categoria de interesse
+
+            <select name="category"
+            id="input-category"
+            required>
+            
+            <option value="">Selecione...</option>
+            <option value="eletronicos">Eletrônicos</option>
+            <option value="roupas">Roupas</option>
+            <option value="acessorios">Acessórios</option>
+            </select>
+            </label>
+
+            <button type="submit" >Enviar</button>
+        
+            <button type="button" class="btn-voltar" onclick="history.back()">Voltar</button>
+        </fieldset>
+    </form>
+
+</body>
+</html>
