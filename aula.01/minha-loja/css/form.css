@@ -1,3 +1,7 @@
+:root {
+    --colortext1: black;
+}
+
 
 body{
     background-color: white;
@@ -65,4 +69,19 @@ select{
 
 .btn-voltar:hover {
     background-color: #0056b3;
+}
+
+.mapa {
+    width: 1000px;
+    height: 600px;
+}
+
+.product-link,
+.product-link:visited,
+.product-link:hover,
+.product-link:active {
+    text-decoration: none;
+    color: black;
+    display: block;
+    cursor: pointer;
 }
