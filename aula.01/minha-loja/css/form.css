@@ -2,23 +2,27 @@
     --colortext1: black;
 }
 
+* {
+    box-sizing: border-box;
+}
 
-body{
+body {
     background-color: white;
     display: flex;
-    justify-content: center; /* Horizontal */
-    align-items: center;     /* Vertical */
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
+    margin: 0;
+    padding: 20px;
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-fieldset{
-    width: 550px;
-    height: 600px;
+/* CARD PRINCIPAL */
+fieldset {
+    width: auto;
+    height: 90%;
+    min-width: 400px;
+    max-width: 900px;
+    min-height: 600px;
     margin: 0 auto;
     border: none;
     border-radius: 20px;
@@ -29,14 +33,36 @@ fieldset{
 
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Alinha tudo à esquerda */
-    border: none;
-}   
+    align-items: flex-start;
+}
 
-input {
-    width: 525px;
-    height: 25px;
-    border-radius: 5px;
+/* Tela normal */
+fieldset {
+    width: 900px;
+    height: 600px;
+}
+
+/* Se a tela for menor ou igual a 700px */
+@media (max-width: 700px) {
+    fieldset {
+        width: 90%;
+        height: 500px;
+    }
+}
+
+/* Se a tela for menor ou igual a 400px */
+@media (max-width: 400px) {
+    fieldset {
+        width: 95%;
+        height: 450px;
+    }
+}
+
+
+/* TÍTULO */
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
 }
 
 .title {
@@ -45,18 +71,56 @@ input {
     margin-bottom: 25px;
 }
 
+/* LABELS */
 label {
     display: block;
     padding: 5px;
 }
 
-select{
-    display: block;
-    width: 150px;
-    height: 20px;
-    margin: 10px 0px 10px 0px;
+/* INPUTS PRINCIPAIS */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    max-width: 100%;
+    height: 32px;
+    border-radius: 5px;
 }
 
+/* SELECT */
+select {
+    display: block;
+    width: 150px;
+    height: 30px;
+    margin: 10px 0;
+}
+
+/* RADIO E CHECKBOX */
+.radio-card,
+.checkbox-card {
+    margin-top: 25px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.option input {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.option label {
+    margin: 0;
+    padding: 0;
+}
+
+/* BOTÃO VOLTAR */
 .btn-voltar {
     display: inline-block;
     padding: 10px 20px;
@@ -71,11 +135,13 @@ select{
     background-color: #0056b3;
 }
 
+/* MAPA */
 .mapa {
     width: 1000px;
     height: 600px;
 }
 
+/* LINKS */
 .product-link,
 .product-link:visited,
 .product-link:hover,
@@ -84,4 +150,9 @@ select{
     color: black;
     display: block;
     cursor: pointer;
+}
+
+.text-link {
+    text-decoration: none;
+    color:var(--colortext1);
 }

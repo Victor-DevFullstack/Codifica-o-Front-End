@@ -42,7 +42,8 @@
             minlength="8"
             placeholder="Mínimo 8 caracteres">
 
-            <label for="input-category">Categoria de interesse
+            <label for="input-category">
+                Categoria de interesse
 
             <select name="category"
             id="input-category"
@@ -54,6 +55,37 @@
             <option value="acessorios">Acessórios</option>
             </select>
             </label>
+
+           <!-- Radio -->
+
+            <div class="radio-card">
+                <div class="option">
+                    <input type="radio" name="tipo" value="pf" id="pf" required>
+                    <label for="pf">Pessoa Física</label>
+                </div>
+
+                <div class="option">
+                    <input type="radio" name="tipo" value="pj" id="pj">
+                    <label for="pj">Pessoa Jurídica</label>
+                </div>
+            </div>
+
+
+            <!-- Checkbox -->
+
+            <div class="checkbox-card">
+                <p>Preferências</p>
+
+                <div class="option">
+                    <input type="checkbox" name="promo" id="promo">
+                    <label for="promo">Receber promoções</label>
+                </div>
+
+                <div class="option">
+                    <input type="checkbox" name="novidades" id="novidades">
+                    <label for="novidades">Receber novidades</label>
+                </div>
+            </div>
 
             <button type="submit" >Enviar</button>
         
