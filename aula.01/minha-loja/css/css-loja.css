@@ -1,28 +1,208 @@
-.section1{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.product{
-    width: 300px;      /* ou 20%, se preferir */
-    box-shadow: 0 4px 8px rgba(0,0,0,.2);
-    border-radius: 5px;
-    overflow: hidden;
-}
 
-.img-product{
-    width: 100%;
-    height: auto;
+/* ===========================
+   PRODUTOS
+=========================== */
+
+
+
+
+/* ===========================
+   HEADER
+=========================== */
+
+.logo-nike{
     display: block;
 }
 
-footer {
-    background-color: gray;
-    color: white;
+
+/* Desktop */
+
+@media (min-width:1024px){
+
+    .header-pc{
+        width:100%;
+        background:#e6e6e6;
+        text-align:left;
+    }
+
+    .header-mobile{
+        display:none;
+    }
+
+    .product{
+        display: flex;
+        width: 300px;
+        box-shadow: 0 4px 8px rgba(0,0,0,.2);
+        border-radius: 5px;
+        overflow: hidden;
+        transition: width 0.2s;
+    }
+    
+    .product:hover {
+        width: 320px;
+        border-radius: 10px;
+    }
+
+    .section1{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    }
+
+    .img-product{
+        width: 100%;
+        height: auto;
+        display: block;
+    }
 }
 
-header {
-    background-color: #e6e6e6;
-    text-decoration: none;
+
+/* Mobile */
+
+@media (max-width:1023.5px){
+
+    .header-pc{
+        display:none;
+    }
+
+    .header-mobile{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:15px 20px;
+    }
+
 }
+
+
+/* ===========================
+   BOTÃO MENU
+=========================== */
+
+.btn-menu{
+
+    background:none;
+    border:none;
+
+    font-size:30px;
+
+    cursor:pointer;
+    left:90%
+}
+
+
+/* ===========================
+   OVERLAY
+=========================== */
+
+.overlay{
+
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.6);
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:999;
+
+}
+
+.overlay.ativo{
+
+    opacity:1;
+    visibility:visible;
+
+}
+
+
+/* ===========================
+   SIDEBAR
+=========================== */
+
+.sidebar{
+
+    position:fixed;
+
+    top:0;
+    right:-350px;
+
+    width:350px;
+    max-width:90%;
+
+    height:100vh;
+
+    background:#fff;
+
+    padding:30px;
+
+    transition:.3s;
+
+    z-index:1000;
+
+}
+
+
+/* Sidebar aberta */
+
+.sidebar.ativo{
+
+    right:0;
+
+}
+
+
+/* ===========================
+   LINKS DA SIDEBAR
+=========================== */
+
+.sidebar nav{
+
+    display:flex;
+    flex-direction:column;
+
+    gap:25px;
+
+    margin-top:40px;
+
+}
+
+.sidebar nav a{
+
+    text-decoration:none;
+    color:#000;
+    font-size:28px;
+
+}
+
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    background:gray;
+    color:white;
+    text-align:center;
+
+}
+
+
+/* ===========================
+   OUTROS
+=========================== */
+

@@ -4,34 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nike</title>
-    <link rel="stylesheet" type="text/css" href="./css/css-loja.css">
+    <link rel="stylesheet" type="text/css" href="./css/css-loja2.css">
+
+    <link rel="icon" type="image/svg+xml" href="./icons/logo-nike.svg">
 </head>
 <body>
-    <h1>Nike</h1>
-    <header>
+
+    <!--HEADER DESKTOP-->
+    <header class="header-pc">
         <nav class="nav-menu">
+            <img src="/icons/logo-nike.svg" alt="logo da nike" class="logo-nike">
            <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#produto">Produtos</a></li>
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#contact">Contato</a></li>
-            <li><a href="./form.html">Formulário</a></li>
+            <li><a href="./form.html">Entrar</a></li>
            </ul>
         </nav>
+
+        <button id="btnMenu" class="btn-menu">
+    </header>
+
+    <!--HEADER MOBILE-->
+
+    <header class="header-mobile">
+        <img src="/icons/logo-nike.svg" alt="logo da nike" class="logo-nike">
+        
+        <button id="btnMenu" class="btn-menu">
+        
+    </button>
     </header>
             
+
+    <div id="overlay" class="overlay"></div>
+
+    <aside id="sidebar" class="sidebar">
+
+        <button class="btn-login">
+            Entrar
+        </button>
+
+        <nav>
+            <a href="">Ofertas</a>
+            <a href="">Volta às Aulas</a>
+            <a href="">Lançamentos</a>
+            <a href="">Masculino</a>
+            <a href="">Feminino</a>
+            <a href="">Infantil</a>
+            <a href="">SNKRS</a>
+        </nav>
+
+    </aside>
+
+
+    <!--MAIN-->
     <main>
+        <section class="promo-bar">
+
+            <button class="arrow left" id="anterior">
+                &#10094;
+            </button>
+
+
+            <div class="slider-container">
+
+                <div class="slider-track">
+
+                    <div class="slide">
+                        <h3>TÊNIS DE CORRIDA</h3>
+                        <p>
+                            Encontre seu tênis ideal.
+                            <a href="#">Saiba mais.</a>
+                        </p>
+                    </div>
+
+
+                    <div class="slide">
+                        <h3>CARTÃO PRESENTE</h3>
+                        <p>
+                            Para presentes de última hora.
+                            <a href="#">Saiba mais.</a>
+                        </p>
+                    </div>
+
+
+                    <div class="slide">
+                        <h3>LANÇAMENTOS</h3>
+                        <p>
+                             Confira as novidades da Nike.
+                            <a href="#">Saiba mais.</a>
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button class="arrow right" id="proximo">
+                &#10095;
+            </button>
+
+        </section>
+
         <!-- Banner -->
         <section class="banner" aria-label="Destaque principal">
             <h2>Promoções Imperdíveis</h2>
             <p>Os melhores produtos com os melhores preços!</p>
         </section>
+
         <h2>Produtos em destaque</h2>
+
         <section id="produto" class="section1">
             <article class="product">
                 <img class="img-product" src="img/tenis2.webp" alt="Tênis de corrida preto">
                 <p>Tênis Nike Revolution 8 Masculino<br>
                 R$299,99 no Pix</p>
+                
+                <span class="novo">NOVO</span>
+            </article>
+
+            <article class="product">
+                <img class="img-product" src="img/tenis4.webp" alt="Tênis de passeio marrom masculino">
+                <p>Dunk Low Retro Premium<br>
+                R$588,99 no Pix</p>
+            </article>
+
+            <article class="product">
+                <img class="img-product" src="img/tenis4.webp" alt="Tênis de passeio marrom masculino">
+                <p>Dunk Low Retro Premium<br>
+                R$588,99 no Pix</p>
             </article>
 
             <article class="product">
@@ -49,27 +152,6 @@
                     </p>
                 </article>
             </a>
-
-
-            
-
-            <table class="product-table">
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Preço</th>
-                        <th>Categoria</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Revolution 8</td>
-                        <td>R$299,99</td>
-                        <td>Corrida</td>
-                    </tr>
-
-                </tbody>
-            </table>
         </section>
 
 
@@ -94,6 +176,7 @@
                 ></iframe>
             </section>
         </section>
+
     </main>
 
     
@@ -102,5 +185,8 @@
         <p>suportenike@gmail.com © 2026 Nike</p>
         <p>(21) 93254-4256</p>
     </footer>
+
+    <script src="./script/slider.js"></script>
+    <script src="./script/menu.js"></script>
 </body>
 </html>
