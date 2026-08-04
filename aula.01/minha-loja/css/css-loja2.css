@@ -87,13 +87,13 @@ body {
         align-items: center;
         background-color: #FAFAFA;
         width: 100%;
-        height: 35px;
+        height: 36px;
         padding: 0 40px;
     }
 
     .logos-header1 {
         justify-self: start;
-        gap: 10px;
+        gap: 20px;
     }
 
     .section-header1 {
@@ -127,7 +127,7 @@ body {
         align-items: center;
         width: 100%;
 
-        height: 65px;
+        height: 60px;
         background: #fff;
 
         padding: 0 40px;
@@ -184,7 +184,7 @@ body {
     }
 
     main {
-        padding-top: 100px;
+        padding-top: 96px;
     }
 
     .header-mobile{
@@ -362,7 +362,7 @@ body {
 
         width:100%;
 
-        height:70px;
+        height:55px;
 
         background:#FAFAFA;
 
@@ -379,7 +379,7 @@ body {
 
     .slider-container{
 
-        width:90%;
+        width:50%;
 
         overflow:hidden;
 
@@ -405,19 +405,24 @@ body {
     }
 
 
-    .slide h3{
-
-        font-size:16px;
-
-        margin-bottom:5px;
-
+    .slide {
+        min-width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        text-align:center;
     }
 
+    
+    .span-slide-titulo {
+        font-weight:700;
+    }
 
-    .slide p{
-
-        font-size:14px;
-
+    .span-slide,
+    .link-slide{
+        font-size:16px;
+        line-height:1;
     }
 
 
@@ -428,7 +433,6 @@ body {
         font-weight:bold;
 
     }
-
 
     .arrow{
 
