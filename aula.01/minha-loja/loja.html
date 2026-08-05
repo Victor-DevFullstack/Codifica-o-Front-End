@@ -15,10 +15,10 @@
         <nav class="nav-menu">
             <div class="container-header1">
                 <div class="logos-header1">
-                    <a title="Ir para página do Jordan" href="/sc/jordan">
+                    <a title="Ir para página do Jordan" href="/sc/jordan" class="jordan1">
                         <img alt="Jordan" loading="lazy" width="19" height="18" decoding="async" data-nimg="1" class="logo-jordan   " srcset="https://static.nike.com.br/v12-31-0/images/brands/jordan.svg 1x" src="https://static.nike.com.br/v12-31-0/images/brands/jordan.svg" style="color: transparent;">
                     </a>
-                    <a title="Ir para página do Sneakers" href="/snkrs">
+                    <a title="Ir para página do Sneakers" href="/snkrs" class="sneakers1">
                         <img alt="Ir para página do Sneakers" loading="lazy" width="46" height="15" decoding="async" data-nimg="1" class="logo-sneakers" srcset="https://static.nike.com.br/v12-31-0/images/brands/snkrs.svg 1x, https://static.nike.com.br/v12-31-0/images/brands/snkrs.svg 2x" src="https://static.nike.com.br/v12-31-0/images/brands/snkrs.svg" style="color: transparent;">
                     </a>
                 </div>
@@ -38,23 +38,46 @@
             </div>
 
             <div class="container-header2">
-                <span class="logo-nike">
-                    <a title="Ir para a página principal" href="./loja.html" class="link-logo">
-                        <img alt="Nike" title="Nike" loading="eager" width="64" height="24" decoding="async" data-nimg="1" class="dark:filter_invert(1)" srcset="https://static.nike.com.br/v12-31-0/images/brands/logo.svg 1x, https://static.nike.com.br/v12-31-0/images/brands/logo.svg 2x" src="https://static.nike.com.br/v12-31-0/images/brands/logo.svg" style="color: transparent;">
-                    </a>
-                </span>
-                <section class="section-header2">
-                    <ul>
-                        <li><a class="nav-li" href="./pages/ofertas.html">Ofertas</a></li>
-                        <li><a class="nav-li" href="./pages/ofertas.html">Volta Às Aulas</a></li>
-                        <li><a class="nav-li" href="./pages/ofertas.html">Lançamentos</a></li>
-                        <li><a class="nav-li" href="./pages/ofertas.html">Masculino</a></li>
-                        <li><a class="nav-li" href="./pages/ofertas.html">Feminino</a></li>
-                        <li><a class="nav-li" href="./pages/ofertas.html">Infantil</a></li>
-                        <li><a class="nav-li" href="./pages/ofertas.html">SNKRS</a></li>
-                    </ul>
-                </section>
-                <div><p>andamento</p></div>
+                <div class="header2-mobile">
+                    <span class="logo-nike">
+                        <a title="Ir para a página principal" href="./loja.html" class="link-logo">
+                            <img alt="Nike" title="Nike" loading="eager" width="64" height="24" decoding="async" data-nimg="1" class="img-logo-nike" srcset="https://static.nike.com.br/v12-31-0/images/brands/logo.svg 1x, https://static.nike.com.br/v12-31-0/images/brands/logo.svg 2x" src="https://static.nike.com.br/v12-31-0/images/brands/logo.svg" style="color: transparent;">
+                        </a>
+                    </span>
+                    <section class="header2-buttons">
+                        <button class="btn-lupa" type="button" aria-label="Buscar">
+                            <img class="img-lupa" src="./icons/lupa.png">
+                        </button>
+                        <button type="button" aria-label="Login" data-testid="login-icon-button" class="btn-login">
+                            <img class="img-login" src="icons/person.png">
+                        </button>
+                        <button type="button" class="btn-sacola" aria-label="Sacola vazia">
+                            <img class="img-sacola" src="./icons/sacola2.png">
+                        </button>
+                        <button type="button" aria-label="Abrir menu" data-testid="menu-button" class="btn-menu-header2">
+                            <img class="img-menu" src="./icons/menu.png">
+                        </button>
+                    </section>
+                </div>
+
+                <div class="header2-desktop">
+                    <span class="logo-nike">
+                        <a title="Ir para a página principal" href="./loja.html" class="link-logo">
+                            <img alt="Nike" title="Nike" loading="eager" width="64" height="24" decoding="async" data-nimg="1" class="dark:filter_invert(1)" srcset="https://static.nike.com.br/v12-31-0/images/brands/logo.svg 1x, https://static.nike.com.br/v12-31-0/images/brands/logo.svg 2x" src="https://static.nike.com.br/v12-31-0/images/brands/logo.svg" style="color: transparent;">
+                        </a>
+                    </span>
+                    <section class="section-header2">
+                        <ul>
+                            <li><a class="nav-li" href="./pages/ofertas.html">Ofertas</a></li>
+                            <li><a class="nav-li" href="./pages/ofertas.html">Lançamentos</a></li>
+                            <li><a class="nav-li" href="./pages/ofertas.html">Masculino</a></li>
+                            <li><a class="nav-li" href="./pages/ofertas.html">Feminino</a></li>
+                            <li><a class="nav-li" href="./pages/ofertas.html">Infantil</a></li>
+                            <li><a class="nav-li" href="./pages/ofertas.html">SNKRS</a></li>
+                        </ul>
+                    </section>
+                    <div><p>andamento</p></div>
+                </div>
             </div>
         </nav>
     </header>
@@ -66,29 +89,8 @@
         
         <button id="btnMenu" class="btn-menu">
         
-    </button>
-    </header>
-            
-
-    <div id="overlay" class="overlay"></div>
-
-    <aside id="sidebar" class="sidebar">
-
-        <button class="btn-login">
-            Entrar
         </button>
-
-        <nav>
-            <a href="">Ofertas</a>
-            <a href="">Volta às Aulas</a>
-            <a href="">Lançamentos</a>
-            <a href="">Masculino</a>
-            <a href="">Feminino</a>
-            <a href="">Infantil</a>
-            <a href="">SNKRS</a>
-        </nav>
-
-    </aside>
+    </header>
 
 
     <!--MAIN-->
@@ -138,11 +140,6 @@
 
         </section>
 
-        <!-- Banner -->
-        <section class="banner" aria-label="Destaque principal">
-            <h2>Promoções Imperdíveis</h2>
-            <p>Os melhores produtos com os melhores preços!</p>
-        </section>
 
         <h2>Produtos em destaque</h2>
 
