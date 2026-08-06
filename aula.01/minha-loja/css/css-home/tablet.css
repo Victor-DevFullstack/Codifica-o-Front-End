@@ -1,0 +1,309 @@
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+        
+    .header-pc{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .container-header1{
+        display: none;
+    }
+
+        
+    .container-header2{
+        width: 100%;
+        height: 66px;
+
+        display: flex;
+        align-items: center;
+
+        background: #fff;
+
+        padding: 0 0px; /* ou 0 se quiser encostar totalmente */
+    }
+
+    .header2-desktop {
+        display: none;
+    }
+
+    .header2-mobile{
+        width: 100%;
+        height: 40px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 0 20px;
+    }
+
+    .logo-nike{
+        width: 39px;
+        height: 14px;
+            
+    }
+
+    .img-logo-nike {
+        width: 39px;
+            height: 14px;
+    }
+
+    .header2-buttons{    
+        height: 40px;
+        justify-self: end;
+        gap: 4px;
+    }
+
+    .btn-lupa,
+    .btn-login,
+    .btn-sacola,
+    .btn-menu-header2{
+        background: transparent;
+        border: none;
+        width: 40px;
+        height: 40px;
+        justify-self: end;
+    }
+
+    .img-lupa,
+    .img-login,
+    .img-sacola,
+    .img-menu {
+        width: 24px;
+        height: 24px;
+    }
+
+        /*.container-header2 > div{
+            justify-self: end;
+        }
+
+        .nav-menu {
+            width: 100%;
+            display: inline;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            margin-top: 10px;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .nav-menu ul li {
+            display: inline-block;
+            margin: 0 10px;
+            text-align: center;
+        }
+
+        .nav-menu a {
+            gap: 100px;
+            color: #000000;
+            text-decoration: none;
+            text-align: center;
+        }*/
+
+        /* Hover no menu */
+
+    .nav-menu a:hover {
+    text-decoration: underline;
+    }
+
+    main {
+        padding-top: 66px;
+    }
+
+    .promo-bar{
+
+        width:100%;
+        height:55px;
+
+        background:#FAFAFA;
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:center;
+
+        overflow:hidden;
+
+    }
+
+
+        .slider-container{
+        width:90%;
+
+        overflow:hidden;
+    }
+
+
+        .slider-track{
+        display:flex;
+        transition:transform 0.5s ease-in-out;
+    }
+
+
+        .slide{
+        min-width:100%;
+        text-align:center;
+    }
+
+
+        .slide {
+            min-width:100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            text-align:center;
+        }
+
+        
+        .span-slide-titulo {
+            font-weight:700;
+        }
+
+        .span-slide,
+        .link-slide{
+            font-size:16px;
+            line-height:1;
+        }
+
+
+        .slide a{
+
+            color:black;
+
+            font-weight:bold;
+
+        }
+
+        .arrow{
+
+            background:none;
+
+            border:none;
+
+            font-size:30px;
+
+            cursor:pointer;
+
+            padding:10px;
+
+        }
+
+
+        .arrow:hover{
+
+            opacity:0.5;
+
+        }
+
+
+
+        /*================================================
+                        MENU LATERAL
+        ================================================*/
+
+    .overlay{
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,.5);
+
+        opacity: 0;
+        visibility: hidden;
+
+        transition: .3s;
+        z-index: 998;
+    }
+
+    .overlay.ativo{
+        opacity: 1;
+        visibility: visible;
+    }
+
+.menu-lateral{
+    position: fixed;
+    top: 0;
+    right: -320px;
+
+    width: 280px;
+    max-width: 85vw;
+
+    height: 100vh;
+
+    background: #fff;
+
+    transition: right .3s ease;
+
+    z-index: 2001;
+
+    padding: 32px 22px;
+
+    overflow-y: auto;
+}
+
+.menu-lateral.ativo{
+    right: 0;
+}
+
+.btn-login-menu {
+    width: 80px;
+    height: 40px;
+    border-radius: 40px;
+    color: #fff;
+    background: #000000;
+    border: none;
+
+    font-family: "Nike Futura ND", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.menu-nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-inferior {
+    display: flex;
+    flex-direction: column;
+}
+    /*================================================
+                    CARD PRODUTOS
+    ================================================*/
+.product{
+   display:inline-flex;
+    width: 200px;
+    height: 300px;
+    max-height: 200vh;
+
+    box-shadow: 0 4px 8px rgba(0,0,0,.2);
+    border-radius: 10px;
+
+    overflow: hidden;
+    transition: width 0.5s;
+            
+    padding: 20px;
+}
+        
+.product:hover {
+    width: 220px;
+    border-radius: 12px;
+}

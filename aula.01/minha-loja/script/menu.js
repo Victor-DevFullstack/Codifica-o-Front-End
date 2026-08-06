@@ -1,17 +1,13 @@
-const btnMenu = document.getElementById("btnMenu");
-const sidebar = document.getElementById("sidebar");
-const overlay = document.getElementById("overlay");
+const btnMenu = document.querySelector(".btn-menu-header2");
+const menu = document.querySelector(".menu-lateral");
+const overlay = document.querySelector(".overlay");
 
 btnMenu.addEventListener("click", () => {
-
-    sidebar.classList.add("ativo");
+    menu.classList.add("ativo");
     overlay.classList.add("ativo");
-
 });
 
 overlay.addEventListener("click", () => {
-
-    sidebar.classList.remove("ativo");
+    menu.classList.remove("ativo");
     overlay.classList.remove("ativo");
-
 });

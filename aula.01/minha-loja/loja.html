@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nike</title>
-    <link rel="stylesheet" type="text/css" href="./css/css-loja2.css">
+    <link rel="stylesheet" href="css/css-home/style.css">
+
+    <link rel="stylesheet" href="css/css-home/mobile.css" media="screen and (max-width: 767.98px)">
+
+    <link rel="stylesheet" href="css/css-home/tablet.css" media="screen and (min-width:768px) and (max-width:1023.98px)">
+
+    <link rel="stylesheet" href="css/css-home/desktop.css" media="screen and (min-width:1024px)">
 
     <link rel="icon" type="image/svg+xml" href="./icons/white-nike-logo.jpg">
 </head>
@@ -46,16 +52,16 @@
                     </span>
                     <section class="header2-buttons">
                         <button class="btn-lupa" type="button" aria-label="Buscar">
-                            <img class="img-lupa" src="./icons/lupa.png">
+                            <img class="img-lupa" src="./icons/lupa.svg">
                         </button>
                         <button type="button" aria-label="Login" data-testid="login-icon-button" class="btn-login">
-                            <img class="img-login" src="icons/person.png">
+                            <img class="img-login" src="icons/person.svg">
                         </button>
                         <button type="button" class="btn-sacola" aria-label="Sacola vazia">
-                            <img class="img-sacola" src="./icons/sacola2.png">
+                            <img class="img-sacola" src="./icons/sacola.svg">
                         </button>
                         <button type="button" aria-label="Abrir menu" data-testid="menu-button" class="btn-menu-header2">
-                            <img class="img-menu" src="./icons/menu.png">
+                            <img class="img-menu" src="./icons/menu.svg">
                         </button>
                     </section>
                 </div>
@@ -66,7 +72,7 @@
                             <img alt="Nike" title="Nike" loading="eager" width="64" height="24" decoding="async" data-nimg="1" class="dark:filter_invert(1)" srcset="https://static.nike.com.br/v12-31-0/images/brands/logo.svg 1x, https://static.nike.com.br/v12-31-0/images/brands/logo.svg 2x" src="https://static.nike.com.br/v12-31-0/images/brands/logo.svg" style="color: transparent;">
                         </a>
                     </span>
-                    <section class="section-header2">
+                    <section class="section-header2-desktop-links">
                         <ul>
                             <li><a class="nav-li" href="./pages/ofertas.html">Ofertas</a></li>
                             <li><a class="nav-li" href="./pages/ofertas.html">Lançamentos</a></li>
@@ -76,22 +82,102 @@
                             <li><a class="nav-li" href="./pages/ofertas.html">SNKRS</a></li>
                         </ul>
                     </section>
-                    <div><p>andamento</p></div>
+                    <section class="section-header2-desktop-buttons">
+                        <button class="btn-lupa" type="button" aria-label="Buscar">
+                            <img class="img-lupa" src="./icons/lupa.svg">
+                        </button>
+                        <button type="button" aria-label="favorite" data-testid="favorite-icon-button" class="btn-favorito">
+                            <img class="img-favorite" src="icons/heart.svg">
+                        </button>
+                        <button type="button" class="btn-sacola" aria-label="Sacola vazia">
+                            <img class="img-sacola" src="./icons/sacola.svg">
+                        </button>
+                    </section>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!--HEADER MOBILE-->
 
-    <header class="header-mobile">
-        <img src="/icons/logo-nike.svg" alt="logo da nike" class="logo-nike">
-        
-        <button id="btnMenu" class="btn-menu">
-        
-        </button>
-    </header>
 
+<!------------------------------MENU LATERAL------------------------->
+
+    <div class="overlay"></div>
+
+    <aside class="menu-lateral">
+
+        <section class="menu-topo">
+            <button class="btn-login-menu">Entrar</button>
+        </section>
+
+        <nav class="menu-nav">
+            <ul>
+
+                <li>
+                    <a href="#">
+                        <span>Ofertas</span>
+                        <span>›</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span>Lançamentos</span>
+                        <span>›</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span>Masculino</span>
+                        <span>›</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span>Feminino</span>
+                        <span>›</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span>Infantil</span>
+                        <span>›</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span>SNKRS</span>
+                        <span>›</span>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <section class="menu-inferior">
+
+            <a href="#">
+                <img src="img/pedido.svg" alt="">
+                <span>Acompanhe seu pedido</span>
+            </a>
+
+            <a href="#">
+                <img src="/icons/gear.svg" alt="">
+                <span>Acessibilidade</span>
+            </a>
+
+            <a href="#">
+                <img src="img/ajuda.svg" alt="">
+                <span>Ajuda</span>
+            </a>
+
+        </section>
+
+    </aside>
 
     <!--MAIN-->
     <main>
