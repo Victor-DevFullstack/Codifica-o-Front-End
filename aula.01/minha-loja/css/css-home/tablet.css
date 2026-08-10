@@ -288,8 +288,13 @@
     /*================================================
                     CARD PRODUTOS
     ================================================*/
+.img-inicial-page {
+        width: 100%;
+        height: auto;
+    }
+
 .product{
-   display:inline-flex;
+    display:inline-flex;
     width: 200px;
     height: 300px;
     max-height: 200vh;
@@ -298,12 +303,24 @@
     border-radius: 10px;
 
     overflow: hidden;
-    transition: width 0.5s;
+    transition: height 0.5s;
             
     padding: 20px;
 }
         
 .product:hover {
-    width: 220px;
+    height: 320px;
     border-radius: 12px;
+}
+
+
+
+    /*=====================================================
+                            FOOTER
+    =====================================================*/
+
+
+.nav-section-3-footer {
+    display: flex;
+    flex-direction: column;
 }
