@@ -1,0 +1,16 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+.filme-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.destaque {
+    background-color: #ffbe3c;
+    font-weight: bold;
+}
