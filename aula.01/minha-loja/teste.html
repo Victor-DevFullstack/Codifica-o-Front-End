@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Link com CSS externo -->
+        <link rel="stylesheet" href="style.css">
+        <title>Minha Loja Online</title>
+    </head>
+
+    <body>
+
+        <!-- Cabeçalho -->
+        <header class="header">
+        <h1>Minha Loja Online</h1>
+
+        <nav class="nav-menu">
+        <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Produtos</a></li>
+        <li><a href="#">Contato</a></li>
+        </ul>
+        </nav>
+        </header>
+
+        <main id="home">
+
+        <!-- Banner -->
+        <section class="banner" aria-label="Destaque principal">
+        <h2>Promoções Imperdíveis</h2>
+        <p>Os melhores produtos com os melhores preços!</p>
+        </section>
+
+        <section class="products">
+        <h2>Produtos</h2>
+        <div id="product-list"></div>
+        </section>
+
+        <!-- Produtos com imagem
+        <section class="products">
+        <article class="product-card">
+        <h3>Smartphone</h3>
+        <img src="img/iphone.jpg" alt="Imagem de um smartphone moderno">
+        <p>Smartphone com alta tecnologia.</p>
+        <button class="btn">Comprar</button>
+        </article>
+
+        <article class="product-card">
+        <h3>Camiseta</h3>
+        <img src="img/camisa.jpg" alt="Camiseta casual confortável">
+        <p>Camiseta de algodão premium.</p>
+        <button class="btn">Comprar</button>
+        </article>
+
+        <article class="product-card">
+        <h3>Relógio</h3>
+        <img src="img/relogio.jpg" alt="Relógio de pulso">
+        <p>Relógio luxuoso</p>
+        <button class="btn">Comprar</button>
+        </article>
+        </section>-->
+
+        <!-- Sobre -->
+        <section id="sobre" class="about">
+        <div class="about-content">
+        <!-- Vídeo promocional -->
+        <section class="promo-video">
+        <h2>Conheça nossa loja</h2>
+
+        <video controls width="500">
+        <source src="img/video.mp4" type="video/mp4">
+
+        Seu navegador não suporta vídeo.
+        </video>
+        </section>
+
+        <!-- Integração com iframe -->
+        <section class="location">
+        <h3>Nossa Localização</h3>
+
+        <iframe src=
+        "https://www.youtube.com/embed/a4cA0ET9DRY?si=WXRjD9ngmuBGpHN7"
+        width="300" height="200"
+        title="Vídeo externo">
+        </iframe>
+
+        <iframe
+        src=
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6249.5718551402415!2d-43.20067162297481!3d-22.909948079252946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f0c4e687185%3A0x973c7a140b9b61fa!2sEdif%C3%ADcio%20Eco%20Sapuca%C3%AD!5e1!3m2!1spt-BR!2sbr!4v1776867085334!5m2!1spt-BR!2sbr"
+        width="300" height="200" style="border:0;" allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" width="300" height
+        ="200" title="Maps">
+
+        </iframe>
+        </section>
+        </div>
+
+        <h2 class="about-title">Sobre a Loja</h2>
+        <p class="about-text">Somos uma loja dedicada a oferecer produtos de
+        qualidade com os melhores preços.</p>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="contact">
+        <section id="contato">
+        <h2>Contato</h2>
+
+        <form id="formulario">
+        <input type="text" id="nome" placeholder="Nome">
+        <input type="email" id="email" placeholder="Email">
+        <button type="submit">Enviar</button>
+        </form>
+
+        <p id="mensagem"></p>
+        </section>
+
+        <hr>
+
+        <section class="todo">
+        <h2>Lista de Tarefas</h2>
+
+        <input type="text" id="nova-tarefa" placeholder="Digite uma tarefa">
+        <button id="adicionar">Adicionar</button>
+
+        <ul id="lista-tarefas"></ul>
+        </section>
+        </main>
+
+        <footer>
+        <p>&copy; 2026 Minha Loja Online</p>
+        </footer>
+
+        <script src="teste.js"></script>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+JAVASCRIPT
+Ações:
+
+Sempre deve ser nessa ordem variável.acao
+Remover: .splice
+Adicionar: .push
+Buscar: .find
+
+
+JSON:
+Para salvar por exemplo um produto de um carrinho de compras usamos
+JSON.stringfy(variavel)    Desta forma os produtos são salvos transformados em formato de string(texto).
+
+Para pegar esses dados é preciso pedir que transforme esses dados em array de objetos. 
+JSON.parse(localStorage.getItem("carrinho")) || [];  Desta forma o parse manda transformar no

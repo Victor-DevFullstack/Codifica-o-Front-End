@@ -1,18 +1,4 @@
-/*
-<article class="product">
-    <img class="img-product" src="img/tenis4.webp" alt="Tênis de passeio marrom masculino">
-    <p>Dunk Low Retro Premium<br>
-    R$588,99 no Pix</p>
-</article>
-
-article class="product">
-    <img class="img-product" src="img/tenis2.webp" alt="Tênis de corrida preto">
-    <p>Tênis Nike Revolution 8 Masculino<br>
-    R$299,99 no Pix</p>
-                
-    <span class="novo">NOVO</span>
-</article>
-*/
+/*import { adicionarAoCarrinho } from "./carrinhoUtils.js";*/
 
 const produtosLoja = [
     {
@@ -74,7 +60,15 @@ function renderizarProdutos(lista){
             <p>${produto.nome}</p>
             <p>${produto.classe}</p>
             <h3>R$${produto.preco}</h3>
+            <button class="btn-comprar">Comprar</button>
             `;
+
+            /*card
+            .querySelector("btn-comprar")
+            .addEventListener("click", () => {
+                adicionarAoCarrinho(produto);
+                alert("Produto adicionado ao carrinho")
+            });*/
 
             container.appendChild(card); 
         }
