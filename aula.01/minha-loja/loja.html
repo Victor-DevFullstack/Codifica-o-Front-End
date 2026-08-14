@@ -89,11 +89,18 @@
                         <button type="button" aria-label="favorite" data-testid="favorite-icon-button" class="btn-favorito">
                             <img class="img-favorite" src="icons/heart.svg">
                         </button>
-                        <button type="button" class="btn-sacola" aria-label="Sacola vazia">
-                            <a href="./pages/carrinho.html">
-                                <img class="img-sacola" src="./icons/sacola.svg">
-                            </a>
-                        </button>
+                        <article class="mini-cart">
+                            <button type="button" class="btn-sacola" aria-label="Sacola vazia">
+                                <a href="./pages/carrinho.html">
+                                    <img class="img-sacola" src="./icons/sacola.svg">
+                                </a>
+                            </button>
+                            <span id="cart-count">0</span>
+                            <div class="mini-cart-dropdown" id="mini-cart-dropdown">
+                                <ul id="mini-cart-list"></ul>
+                                <p id="mini-total">Total: R$ 0</p>
+                            </div>
+                        </article>
                     </section>
                 </div>
             </div>
@@ -272,6 +279,31 @@
             </a>-->  
 
 
+            <!--===============================================
+                            CARRINHO
+            ================================================-->
+
+        <section class="cart">
+            <h2>Carrinho</h2>
+
+            <!-- Lista de itens do carrinho -->
+            <ul id="cart-list"></ul>
+
+            <!-- Valor total -->
+            <p id="total">Total: R$ 0</p>
+
+            <!-- Botão de finalização da compra -->
+            <button id="finalizar-compra">Finalizar Compra</button>
+
+            <!-- Mensagem de feedback (sucesso/erro) -->
+            <p id="mensagem-compra"></p>
+        </section>
+
+
+        <!--=================================================
+                             SOBRE
+        ==================================================-->
+        
         <!--Sobre-->
         <section id="sobre" class="about">
             <!--Videos promocionais-->

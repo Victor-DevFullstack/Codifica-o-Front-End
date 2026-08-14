@@ -4,20 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sacola</title>
+
+    <link rel="stylesheet" href="../css/css-home/desktop.css" media="screen and (min-width:1024px)">
 </head>
 <body>
-    <button><a href="../loja.html">Voltar</a></button>
+
+    <!--===============================================
+                        CARRINHO
+    ================================================-->
 
     <section class="cart">
         <h2>Carrinho</h2>
 
+        <!-- Lista de itens do carrinho -->
         <ul id="cart-list"></ul>
 
-        <p id="total">Total:R$ 0</p>
+        <!-- Valor total -->
+        <p id="total">Total: R$ 0</p>
 
+        <!-- Botão de finalização da compra -->
         <button id="finalizar-compra">Finalizar Compra</button>
 
+        <!-- Mensagem de feedback (sucesso/erro) -->
         <p id="mensagem-compra"></p>
+
+        <button><a href="../loja.html">Voltar</a></button>
     </section>
+
+    <script src="../js/carrinho.js"></script>
 </body>
 </html>
