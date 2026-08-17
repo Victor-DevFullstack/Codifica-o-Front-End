@@ -116,7 +116,7 @@ h2 {
 .item-card img {
     width: 100%;
     height: 300px;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 5px;
     margin-bottom: 1rem;
 }

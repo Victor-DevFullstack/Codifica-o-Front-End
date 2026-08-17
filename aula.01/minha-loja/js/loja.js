@@ -23,10 +23,7 @@ const produtos = [
         preco: 588.99,
         img:"./img/tenis4.webp"
     },
-    {
-        id: 2,
-        nome: "Tênis Nike Revolution 8",
-        classe: "Corrida", preco: 299.99, img:"./img/tenis2.webp"},
+    { id: 2, nome: "Tênis Nike Revolution 8", classe: "Corrida", preco: 299.99, img:"./img/tenis2.webp"},
     { id: 3, nome: "Dunk Low Retro Premium", classe: "Casual", preco: 588.99, img:"./img/tenis4.webp"},
     { id: 4, nome: "Dunk Low Retro Premium", classe: "Casual", preco: 588.99, img:"./img/tenis4.webp"},
     { id: 5,nome: "Dunk Low Retro Premium",classe: "Casual", preco: 588.99, img:"./img/tenis4.webp"},
