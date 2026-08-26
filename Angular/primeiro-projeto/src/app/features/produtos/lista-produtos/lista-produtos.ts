@@ -1,5 +1,6 @@
-import { Component, signal, computed, effect} from '@angular/core';
+import { Component, signal, computed, effect, inject} from '@angular/core';
 import { Produto } from '../produto/produto';
+import { ProdutosService } from '../produtos.service';
 
 @Component({
   selector: 'app-lista-produtos',
@@ -8,13 +9,13 @@ import { Produto } from '../produto/produto';
   styleUrl: './lista-produtos.css',
 })
 export class ListaProdutos {
-  produtos = signal([
-    {nome: "Notebook", preco: 3989},
-    {nome: "Mouse", preco: 179}
-  ]);
+  ProdutosService = inject(ProdutosService)
+
+  produtos = signal<{nome: string; preco: number}[]>([]);
+
+  carregando = signal(true);
 
   produtoSelecionado = signal<string | null>(null);
-
 
   //Carrinho
   carrinho = signal<{ nome: string; preco: number }[]>([]);
@@ -52,7 +53,9 @@ export class ListaProdutos {
     this.produtos.set([{nome:'Produto Novo', preco:1989}])
   }
 
-  constructor(){
+  constructor(private http: HttpClient){
+    this.carregarProdutos();
+
     effect(() => {
       console.log(`Lista de produtos alterada: ${this.produtos()}`)
     });
@@ -66,5 +69,41 @@ export class ListaProdutos {
         document.title = `(${this.totalProdutos()}) Minha Loja`;
       }
     });
+
+    effect(() => {
+      if (typeof document !== 'undefined') {
+        document.title = `(${this.totalProdutos()}) Minha Loja`;
+      }
+    });
   };
+    //=================================//
+   //      Método de Requisição       // 
+  //=================================//
+
+   /*carregarProdutos() {
+
+      // inicia loading
+      this.carregando.set(true);
+
+      this.http.get<{ title: string; price: number }[]>
+      ('https://fakestoreapi.com/products')
+      .subscribe({
+      next: (dados) => {
+
+        // Adaptação da API para o nosso projeto
+        const produtosFormatados = dados.map(p => ({
+          nome: p.title,
+          preco: p.price
+        }));
+
+          this.produtos.set(produtosFormatados);
+          this.carregando.set(false); // finaliza loading
+        },
+
+        error: (erro) => {
+          console.error('Erro ao carregar produtos:', erro);
+          this.carregando.set(false); // evita loading infinito
+        }
+      });
+    }*/
 }
