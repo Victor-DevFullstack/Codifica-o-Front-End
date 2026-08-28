@@ -22,6 +22,9 @@ export class ProdutosService {
     }
 
     transformarProdutos(dados: ProdutoApi[]): Produto[] {
-        return dados.map
+        return dados.map((p) => ({
+            nome: p.title,
+            preco: p.price,
+        }));
     }
 }

@@ -1,15 +1,20 @@
 import { Component, signal, computed, effect, inject} from '@angular/core';
 import { Produto } from '../produto/produto';
 import { ProdutosService } from '../produtos.service';
+import { MatButtonModule } from '@angular/material/button';
+
 
 @Component({
   selector: 'app-lista-produtos',
-  imports: [Produto],
+  imports: [Produto,MatButtonModule],
   templateUrl: './lista-produtos.html',
   styleUrl: './lista-produtos.css',
 })
 export class ListaProdutos {
-  ProdutosService = inject(ProdutosService)
+  
+  erro = signal<string | null>(null)
+  
+  private ProdutosService = inject(ProdutosService)
 
   produtos = signal<{nome: string; preco: number}[]>([]);
 
@@ -39,6 +44,7 @@ export class ListaProdutos {
   valorTotal = computed(() => {
     return this.produtos().reduce((total, item) => total + item.preco, 0);
   });
+
   exibirProduto(nome:string){
     this.produtoSelecionado.set(nome)
   }
@@ -53,7 +59,7 @@ export class ListaProdutos {
     this.produtos.set([{nome:'Produto Novo', preco:1989}])
   }
 
-  constructor(private http: HttpClient){
+  constructor(){
     this.carregarProdutos();
 
     effect(() => {
@@ -80,30 +86,20 @@ export class ListaProdutos {
    //      Método de Requisição       // 
   //=================================//
 
-   /*carregarProdutos() {
-
-      // inicia loading
-      this.carregando.set(true);
-
-      this.http.get<{ title: string; price: number }[]>
-      ('https://fakestoreapi.com/products')
-      .subscribe({
+  carregarProdutos() {
+    this.erro.set(null);
+    this.carregando.set(true);
+    this.ProdutosService.buscarProdutos().subscribe({
       next: (dados) => {
-
-        // Adaptação da API para o nosso projeto
-        const produtosFormatados = dados.map(p => ({
-          nome: p.title,
-          preco: p.price
-        }));
-
-          this.produtos.set(produtosFormatados);
-          this.carregando.set(false); // finaliza loading
-        },
-
-        error: (erro) => {
-          console.error('Erro ao carregar produtos:', erro);
-          this.carregando.set(false); // evita loading infinito
-        }
-      });
-    }*/
+        const produtos = this.ProdutosService.transformarProdutos(dados);
+        this.produtos.set(produtos);
+        this.carregando.set(false);
+      },
+      error: (erro) => {
+        console.error('Erro ao carregar produtos:', erro);
+        this.erro.set('Erro ao carregar produtos. Verifique sua conexão e tente novamente.');
+        this.carregando.set(false);
+      },
+    });
+  } 
 }
